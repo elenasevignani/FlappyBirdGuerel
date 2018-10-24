@@ -8,5 +8,19 @@ public class TapController : MonoBehaviour {
 
     public float tapForce = 10;
     public float tiltSmooth = 5;
-		
-	}
+    public Vector3 startPos;
+
+    Rigidbody2D rigidbody;
+    Quaternion downRotation;
+    Quaternion forwardRotation;
+
+    private void Start()
+    {
+        rigidbody = GetComponent<Rigidbody2D>();
+        downRotation = Quaternion.Euler(0, 0, -90);
+        forwardRotation = Quaternion.Euler(0, 0, 35);
+
+
+    }
+
+}
